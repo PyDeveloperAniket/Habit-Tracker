@@ -1,0 +1,63 @@
+ <link rel="stylesheet" href="/css/home.css">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ 
+ <!-- header  -->
+<%- include('_header'); %>
+
+<div>
+    <!----------- if user is not logged in ----------->
+    <% if(!locals.user) { %>
+        <%- include('landing_page'); %>
+    <% }
+    else if(locals.user && locals.habits.length==0) { %>
+    <%= habits %>
+    <!-- if there is no button -->
+        <div id="noHabitText">
+            <img src="https://img.freepik.com/free-vector/overweight-man-cartoon-character-lying-armchair-drinking-soda-physical-inactivity-passive-lifestyle-bad-habit-sedentary-lifestyle_335657-3592.jpg?w=740&t=st=1696195582~exp=1696196182~hmac=47043c4fc5d95b369b2fa8c99f7d9e23abb0bf4fe47b18715849261de0288f2d" alt="Lazy person"
+            style="width: 400px; height: 400px;"
+            />   
+        </div>
+        <!-- button to open add habit form  -->
+        <button class="btn btn-primary" style="width: 200px; margin-top: 30px; margin-left: 650px;" onclick="openForm()" > + Add Habit</button>
+        <div class="form-popup" id="myForm">
+            <form action="/users/habit/create-habit" id="createHabit" method="POST" class="form-container">
+                <input type="text" name="title" placeholder="Habit Title" required>
+                <input type="text" name="desc" placeholder="Description">
+                <div class="d-grid gap-2 d-md-flex" style="margin-left: 35px;">
+                    <button class="btn btn-primary" type="submit" >Save</button>
+                    <button class="btn btn-danger" type="reset" onclick="closeForm()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    <% }
+    else { %>
+        <!-- shows habit section -->
+        <div>
+            <div>                
+                <!-- weekly view -->
+                <%- include('weekly_view'); %>
+                
+                <!-- daily view  -->
+                <%- include('daily_view'); %>
+            </div>
+
+            <!-- button to open add habit form  -->
+            <button id="open-btn" class="btn btn-primary" onclick="openForm()" > + Add Habit</button>
+            <div class="form-popup" id="myForm">
+            <form action="/users/habit/create-habit" id="createHabit" method="POST" class="form-container">
+                <input type="text" name="title" placeholder="Habit Title" required>
+                <input type="text" name="desc" placeholder="Description">
+                <div class="d-grid gap-2 d-md-flex" style="margin-left: 35px;">
+                    <button class="btn btn-primary" type="submit" >Save</button>
+                    <button class="btn btn-danger" type="reset" onclick="closeForm()">Cancel</button>
+                </div>
+            </form>
+            </div>
+            <button id="change-view" class="btn btn-primary" onclick="changeView()" > Show Daily</button>
+        </div>
+    <% } %>
+</div>
+
+
+<script src="/js/home.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

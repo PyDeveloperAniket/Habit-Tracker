@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+
+.userPresent {
+    display: flex;
+    font-weight: 600;
+}
+
+.navbar{
+    background-color: #ffffff;
+}
+
+.container-fluid{
+    background-color: #fff;
+}
+
+.align-text-top{
+    margin-left: 150px;
+}
+
+.d-grid{
+    margin-right: 250px;
+}
+
+.btn{
+    border-radius: 2px;
+    width: 120px;
+    height: 50px;
+    color: #fafafa;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.btn-signin{
+    color: rgb(24, 24, 24);
+    width: 120px;
+    height: 50px;
+    border: none;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.btn-signin:hover{
+    color: blue;
+    background-color: none;
+    border: #fafafa;
+}
+
+.username{
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(60, 58, 58);
+    padding: 10px;
+    margin: 4px;
+}

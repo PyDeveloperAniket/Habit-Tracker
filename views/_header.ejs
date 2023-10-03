@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/header.css">
+
+
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="https://uploads-ssl.webflow.com/5d3aa39f8474c472841a7dfc/647f58e339fa552032d729f6_Logo.png" alt="Logo" width="100" height="50" class="align-text-top">
+      </a>
+        <% if (locals.user){ %>
+            <div class="userPresent">
+                <div class="username me-md-3">Hi <%= user.name%>  </div>
+                <hr>
+                <a href="/users/sign-out" > <button class="btn btn-primary me-md-5" style="margin-top: 10px; height: 45px;" type="button">Sign Out</button> </a>
+            </div>
+            <%} else { %>
+                <div class="d-grid gap-2 d-md-flex">
+                    <a href="/users/sign-in"><button class="btn-signin me-md-3" type="button">Sign In</button></a>
+                    <a href="/users/sign-up"><button class="btn btn-primary me-md-5" type="button">Sign Up</button></a>
+                </div>     
+            <%}
+        %>
+    </div>
+  </nav>

@@ -1,0 +1,66 @@
+<title>Sign Up</title>
+<link rel="stylesheet" href="/css/user_sign_in.css">
+<link rel='stylesheet' href='https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'>
+  <main class="main">
+	<div class="container">
+		<section class="wrapper">
+			<div class="heading">
+				<h1 class="text text-large">User Sign Up</h1>
+				<p class="text text-normal">Already have an account? <span><a href="/users/sign-in" class="text text-links">Sign In</a></span>
+				</p>
+			</div>
+
+			<form action="/users/create" method="POST" class="form">
+                <div class="input-control">
+					<label for="text" class="input-label" hidden>Full Name</label>
+					<input type="text" name="name" class="input-field" placeholder="Full Name">
+				</div>
+				<div class="input-control">
+					<label for="email" class="input-label" hidden>Email Address</label>
+					<input type="email" name="email" class="input-field" placeholder="Email Address">
+				</div>
+				<div class="input-control">
+					<label for="password" class="input-label" hidden>Password</label>
+					<input type="password" name="password" class="input-field" placeholder="Password">
+				</div>
+                <div class="input-control">
+					<label for="password" class="input-label" hidden>Confirm Password</label>
+					<input type="password" name="confirm_password" class="input-field" placeholder="Confirm Password">
+				</div>
+				<div class="input-control">
+					<input type="submit" name="submit" class="input-submit" value="Sign Up" style="margin-left: 200px;">
+				</div>
+                
+			</form>
+
+			<div class="striped">
+				<span class="striped-line"></span>
+				<span class="striped-text">Or</span>
+				<span class="striped-line"></span>
+			</div>
+			<div class="method">
+				<div class="method-control">
+					<a href="" class="method-action">
+						<i class="ion ion-logo-google"></i>
+						<span>Sign in with Google</span>
+					</a>
+				</div>
+				<div class="method-control">
+					<a href="" class="method-action">
+						<i class="ion ion-logo-facebook"></i>
+						<span>Sign in with Facebook</span>
+					</a>
+				</div>
+				<div class="method-control">
+					<a href="" class="method-action">
+						<i class="ion ion-logo-apple"></i>
+						<span>Sign in with Apple</span>
+					</a>
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+</main>
+  

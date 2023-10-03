@@ -1,0 +1,31 @@
+.landing-title{
+    color: black;
+    font-weight: 800px;
+    font-size: 15%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.welcome-img{
+    width: 500px;
+    height: auto;
+    margin-top: 60px;
+    margin-left: 500px;
+}
+
+.get-started{
+    font-size: 130%;
+    text-align: center;
+    color: white;
+    background-color: #0d6efd;
+    width: 200px;
+    height: 50px;
+    border: none;
+    margin-left: 650px;
+    margin-top: 400px;
+    border-radius: 2px;
+}
+
+.get-started:hover{
+    background-color: #2d6dcd;
+}
